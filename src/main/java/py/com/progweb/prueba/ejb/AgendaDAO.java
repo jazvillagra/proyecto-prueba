@@ -28,9 +28,9 @@ public class AgendaDAO {
         this.em.persist(entidad);
     }
 
-    public Object lista(){
+    /*public Object lista(){
         Query q=this.em.createQuery("select a from Agenda a");
         return (List<Agenda>) q.getResultList();
-    }
+    }*/
 
 }

@@ -36,7 +36,12 @@ public class PersonaDAO {
 
     public Object lista() {
         Query q = this.em.createQuery("select p from Persona p");
-        return (List<Persona>) q.getResultList();
+        List<Persona> personas = (List<Persona>) q.getResultList();
+        for(Persona p : personas) {
+            q = this.em.createQuery("select a from Agenda a where a.persona = "+p.getId_persona());
+            p.setListaAgenda((List<Agenda>) q.getResultList());
+        }
+        return personas;
     }
 
 
