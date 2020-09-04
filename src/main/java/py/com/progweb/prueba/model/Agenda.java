@@ -1,14 +1,8 @@
 package py.com.progweb.prueba.model;
 
 
-
-import org.jboss.remoting.samples.chat.exceptions.DatabaseException;
-
 import javax.persistence.*;
-
 import java.util.Date;
-
-import static javax.persistence.GenerationType.*;
 
 @Entity
 @Table(name = "agenda")
@@ -37,8 +31,6 @@ public class Agenda {
     private Persona persona;
 
 
-
-
     public Agenda() {
     }
 
@@ -65,7 +57,6 @@ public class Agenda {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-
 
     public Persona getPersona() {
         return persona;

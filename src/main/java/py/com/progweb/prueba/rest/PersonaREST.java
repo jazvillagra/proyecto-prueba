@@ -1,6 +1,5 @@
 package py.com.progweb.prueba.rest;
 
-import org.omg.Security.Public;
 import py.com.progweb.prueba.ejb.PersonaDAO;
 import py.com.progweb.prueba.model.Persona;
 
@@ -19,15 +18,15 @@ public class PersonaREST {
 
     @GET
     @Path("/")
-    public Response listar(){
+    public Response listar() {
         return Response.ok(personaDAO.lista()).build();
     }
 
     @POST
     @Path("/")
-    public Response crear(Persona p){
+    public Response crear(Persona p) {
         this.personaDAO.agregar(p);
-    return Response.ok().build();
+        return Response.ok().build();
 
     }
 }
